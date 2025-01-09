@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dikdörtgenin Alanını Hesaplama</title>
+    <script>
+        function hesapla() {
+            // Kullanıcıdan uzunluk ve genişlik değerlerini al
+            let uzunluk = parseFloat(document.getElementById("uzunluk").value);
+            let genislik = parseFloat(document.getElementById("genislik").value);
+
+            // Alanı hesapla
+            let alan = uzunluk * genislik;
+
+            // Alanı ekrana yazdır
+            document.getElementById("sonuc").innerText = `Alan: ${alan.toFixed(2)} birim²`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Dikdörtgenin Alanını Hesapla</h1>
+    <label for="uzunluk">Uzunluk (birim):</label>
+    <input type="number" id="uzunluk" step="0.1" min="0">
+    <br>
+    <label for="genislik">Genişlik (birim):</label>
+    <input type="number" id="genislik" step="0.1" min="0">
+    <br>
+    <button onclick="hesapla()">Hesapla</button>
+    <p id="sonuc"></p>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    function topla() {
+      document.getElementById("kutu1").innerHTML = 6 + 15;
+    }
+    function mesaj() {
+      alert("Merhaba Dünya");
+    }
+    function topla2() {
+      let a, b, c;
+      a = 5;
+      b = 10;
+      c = a + b;
+      document.getElementById("kutu1").innerHTML = c;
+    }
+    function topla3() {
+      let sayi1, sayi2, snc;
+      sayi1 = document.getElementById("sayi1").value;
+      sayi2 = document.getElementById("sayi2").value;
+      snc = Number(sayi1) + Number(sayi2);
+      document.getElementById("sonuc").innerHTML = snc;
+    }
+  </script>
+  <body>
+    <div id="kutu1"></div>
+    <input type="text" id="sayi1" />
+    <input type="text" id="sayi2" />
+    Sonuç:<span id="sonuc"></span>
+    <button onclick="topla()">Topla</button>
+    <button onclick="topla3()">Topla 3</button>
+
+    <button onclick="mesaj()">Mesaj</button>
+    <button onclick="topla2()">Topla2</button>
+  </body>
+</html>
